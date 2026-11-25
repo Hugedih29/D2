@@ -1,0 +1,31 @@
+{
+    items = (
+        {
+            cell = PSGroupCell;
+            label = "Hiệu ứng lớp chủ thể";
+            footerText = "Tạo lớp cắt người đặt phía trên đồng hồ Màn hình khóa. Đây là lớp phủ do tweak tạo, không phải bộ Depth Effect gốc của Apple.";
+        },
+        {
+            cell = PSSwitchCell;
+            label = "Bật DepthLayer";
+            default = YES;
+            defaults = "com.codex.depthlayer";
+            key = Enabled;
+            PostNotification = "com.codex.depthlayer/settingschanged";
+        },
+        {
+            cell = PSLinkListCell;
+            label = "Chất lượng tách người";
+            default = balanced;
+            defaults = "com.codex.depthlayer";
+            key = Quality;
+            validTitles = ("Nhanh", "Cân bằng", "Chính xác");
+            validValues = (fast, balanced, accurate);
+            PostNotification = "com.codex.depthlayer/settingschanged";
+        },
+        {
+            cell = PSGroupCell;
+            footerText = "Khuyên dùng Cân bằng trên iPhone X. Tweak chỉ nhận diện người; ảnh có người rõ và nền tách biệt thường cho kết quả tốt hơn.";
+        }
+    );
+}
