@@ -1,0 +1,11 @@
+{
+    CFBundleDevelopmentRegion = English;
+    CFBundleExecutable = DepthLayerPrefs;
+    CFBundleIdentifier = "com.codex.depthlayerprefs.bundle";
+    CFBundleInfoDictionaryVersion = "6.0";
+    CFBundleName = DepthLayerPrefs;
+    CFBundlePackageType = BNDL;
+    CFBundleShortVersionString = "0.3.0";
+    CFBundleVersion = "0.3.0";
+    NSPrincipalClass = DLRootListController;
+}
