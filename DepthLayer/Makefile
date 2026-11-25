@@ -15,7 +15,9 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 BUNDLE_NAME := DepthLayerPrefs
 DepthLayerPrefs_FILES := DLRootListController.m
 DepthLayerPrefs_FRAMEWORKS := UIKit
-DepthLayerPrefs_PRIVATE_FRAMEWORKS := Preferences
+# Preferences.framework ships on-device but has no linkable stub in this SDK.
+# Settings loads it before the pane, so resolve its Objective-C classes at runtime.
+DepthLayerPrefs_LDFLAGS := -undefined dynamic_lookup
 DepthLayerPrefs_INSTALL_PATH := /Library/PreferenceBundles
 DepthLayerPrefs_BUNDLE_RESOURCE_DIRS := Resources
 DepthLayerPrefs_CFLAGS := -fobjc-arc
