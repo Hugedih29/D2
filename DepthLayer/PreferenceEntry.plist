@@ -1,0 +1,8 @@
+{
+    entry = {
+        bundle = "DepthLayerPrefs";
+        cell = PSLinkCell;
+        detail = DLRootListController;
+        label = "DepthLayer";
+    };
+}

@@ -1,0 +1,9 @@
+Package: com.codex.depthlayer
+Name: DepthLayer
+Version: 0.3.0
+Architecture: iphoneos-arm64
+Description: Optimized person depth overlay for the iOS 16 Lock Screen
+Maintainer: Codex
+Author: Codex
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader, firmware (>= 16.0)
