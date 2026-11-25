@@ -16,7 +16,9 @@ include $(THEOS_MAKE_PATH)/tweak.mk
 BUNDLE_NAME := NativeDepthUnlockPrefs
 NativeDepthUnlockPrefs_FILES := NDRootListController.m
 NativeDepthUnlockPrefs_FRAMEWORKS := UIKit
-NativeDepthUnlockPrefs_PRIVATE_FRAMEWORKS := Preferences
+# Preferences.framework ships on-device but has no linkable stub in this SDK.
+# Settings loads it before the pane, so resolve its Objective-C classes at runtime.
+NativeDepthUnlockPrefs_LDFLAGS := -undefined dynamic_lookup
 NativeDepthUnlockPrefs_INSTALL_PATH := /Library/PreferenceBundles
 NativeDepthUnlockPrefs_BUNDLE_RESOURCE_DIRS := Resources
 NativeDepthUnlockPrefs_CFLAGS := -fobjc-arc
